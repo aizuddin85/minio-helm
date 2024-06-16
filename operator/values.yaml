@@ -314,7 +314,10 @@ console:
     labels: { }
     annotations:
       cert-manager.io/cluster-issuer: letsencrypt
-    tls: [ ]
+    tls:
+      - hosts:
+        - minio.apps.k8s.aizuddinzali.com
+        secretName: minio-console-tls
     host: minio.apps.k8s.aizuddinzali.com
     path: /
     pathType: Prefix
